@@ -1,5 +1,5 @@
-(ns tryclojure.eval-test
-  (:use tryclojure.models.eval
+(ns trycascalog.eval-test
+  (:use trycascalog.models.eval
         clojure.test)
   (:require noir.session))
 

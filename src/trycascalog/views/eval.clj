@@ -1,6 +1,6 @@
-(ns tryclojure.views.eval
+(ns trycascalog.views.eval
   (:require [noir.core :refer [defpage]]
-            [tryclojure.models.eval :refer [eval-request]]
+            [trycascalog.models.eval :refer [eval-request]]
             [noir.response :as resp]))
 
 (defpage "/eval.json" {:keys [expr jsonp]}

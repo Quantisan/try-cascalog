@@ -1,4 +1,4 @@
-(ns tryclojure.views.tutorial
+(ns trycascalog.views.tutorial
   (:require [noir.core :refer [defpage]]))
 
 (defpage [:post "/tutorial"] {page :page}

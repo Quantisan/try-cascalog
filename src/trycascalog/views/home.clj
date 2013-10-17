@@ -1,4 +1,4 @@
-(ns tryclojure.views.home
+(ns trycascalog.views.home
   (:require [noir.core :refer [defpartial defpage]]
             [hiccup.element :refer [javascript-tag link-to unordered-list]]
             [hiccup.page :refer [include-css include-js html5]]))
@@ -21,7 +21,7 @@
 	 "You won't be able to do everything in it that you could do in your local interpreter. "
 	 "Also, the interpreter deletes the data that you enter if you define too many things, or after 15 minutes."]
   [:p.bottom
-   "TryClojure is written in Clojure and JavaScript with "
+   "trycascalog is written in Clojure and JavaScript with "
    (link-to "http://webnoir.org" "Noir") ", "
    (link-to "https://github.com/flatland/clojail" "clojail") ", and Chris Done's "
    (link-to "https://github.com/chrisdone/jquery-console" "jquery-console") ". "
@@ -40,17 +40,17 @@
 (defn root-html []
   (html5
    [:head
-    (include-css "/resources/public/css/tryclojure.css"
+    (include-css "/resources/public/css/trycascalog.css"
 								 "/resources/public/css/gh-fork-ribbon.css")
     (include-js "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
                 "/resources/public/javascript/jquery-console/jquery.console.js"
-                "/resources/public/javascript/tryclojure.js")
+                "/resources/public/javascript/trycascalog.js")
     [:title "Try Clojure"]]
    [:body
     [:div#wrapper
 			[:div.github-fork-ribbon-wrapper.right
 	     [:div.github-fork-ribbon
-	       (link-to "https://github.com/Raynes/tryclojure" "Fork me on GitHub")
+	       (link-to "https://github.com/Raynes/trycascalog" "Fork me on GitHub")
 				]
 			]
      [:div#content

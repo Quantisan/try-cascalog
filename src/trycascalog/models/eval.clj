@@ -1,4 +1,4 @@
-(ns tryclojure.models.eval
+(ns trycascalog.models.eval
   (:require [clojail.testers :refer [secure-tester-without-def blanket]]
             [clojail.core :refer [sandbox]]
             [clojure.stacktrace :refer [root-cause]]
@@ -17,12 +17,14 @@
     (eval-form form sbox)))
 
 (def try-clojure-tester
-  (conj secure-tester-without-def (blanket "tryclojure" "noir")))
+  (conj secure-tester-without-def (blanket "trycascalog" "noir")))
 
 (defn make-sandbox []
-  (sandbox try-clojure-tester
+  (sandbox []
            :timeout 2000
            :init '(do (require '[clojure.repl :refer [doc source]])
+                      (use 'cascalog.api)
+                      (use 'cascalog.playground)
                       (future (Thread/sleep 600000)
                               (-> *ns* .getName remove-ns)))))
 
